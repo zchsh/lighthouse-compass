@@ -456,7 +456,7 @@ let recipes = [
   },
 ];
 
-console.log(chooseRecipe(bakeries, recipes, { verbose: false }));
+console.log(chooseRecipe(bakeries, recipes, { verbose: true }));
 
 bakeries = [
   {
@@ -487,4 +487,4 @@ recipes = [
   },
 ];
 
-console.log(chooseRecipe(bakeries, recipes, { verbose: false }));
+console.log(chooseRecipe(bakeries, recipes, { verbose: true }));
