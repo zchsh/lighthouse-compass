@@ -439,6 +439,10 @@ let bakeries = [
 ];
 let recipes = [
   {
+    name: "Saffron Scramble",
+    ingredients: ["eggs", "milk", "saffron"],
+  },
+  {
     name: "Coconut Sponge Cake",
     ingredients: ["coconut", "cake base"],
   },
