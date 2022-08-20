@@ -21,31 +21,6 @@ function arrayIncludes(array, value) {
 }
 
 /**
- * Given an array of string values, and a joinerString with which to join them,
- *
- * Return a single string consisting of the strings in the array joined
- * together with the joinerString between each.
- *
- * @param {string[]} arrayOfStrings
- * @param {string} joinerString
- * @returns {string}
- */
-function arrayJoin(arrayOfStrings, joinerString) {
-  // Set up a string to hold our work as we go
-  let joinedString = "";
-  for (let i = 0; i < arrayOfStrings.length; i++) {
-    // Add each string from the array, one by one
-    joinedString += arrayOfStrings[i];
-    // Only add the joinerString if there's another string to join after it
-    if (i < arrayOfStrings.length - 1) {
-      joinedString += joinerString;
-    }
-  }
-  // Return the joined string
-  return joinedString;
-}
-
-/**
  * A function that picks recipes to help two bakeries work together.
  *
  * We limit our search to two ingredient recipes. We want to find a recipe
