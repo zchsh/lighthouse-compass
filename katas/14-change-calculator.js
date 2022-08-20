@@ -37,7 +37,7 @@ const calculateChange = function (total, cash) {
   // if we don't have pennies available, then chuck a bunch of pennies
   // at the customer to cover the difference. Good day to you, customer.
   if (changeAmount > 0) {
-    changeBack.pennies = changeAmount;
+    changeBack.penny = changeAmount;
   }
   // Give em back their change.
   return changeBack;
