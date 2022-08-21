@@ -5,6 +5,27 @@
     <title>Bar Chart Project</title>
   </head>
   <body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("hello from DOMContentLoaded!");
+
+        // Testing out a text input
+        $("#some-text-value").on("change keyup paste", function (e) {
+          const value = e.target.value;
+          console.log({ value });
+        });
+
+        // Testing out a number input
+        $("#some-number-value").on("change keyup paste", function (e) {
+          const value = e.target.value;
+          console.log({ value });
+        });
+      });
+    </script>
+
+    <p><input id="some-text-value" type="text" /></p>
+    <p><input id="some-number-value" type="number" /></p>
     <p>Hello world! This is where the bar chart project will live.</p>
   </body>
 </html>
