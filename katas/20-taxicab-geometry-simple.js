@@ -5,11 +5,11 @@ function getMovementVector(direction, amount) {
     case "north":
       directionVector = [0, 1];
       break;
-    case "east":
-      directionVector = [1, 0];
-      break;
     case "south":
       directionVector = [0, -1];
+      break;
+    case "east":
+      directionVector = [1, 0];
       break;
     case "west":
       directionVector = [-1, 0];
@@ -35,10 +35,10 @@ function changeDirection(currentDirection, turn) {
   switch (currentDirection) {
     case "north":
       return turn == "right" ? "east" : "west";
-    case "east":
-      return turn == "right" ? "south" : "north";
     case "south":
       return turn == "right" ? "west" : "east";
+    case "east":
+      return turn == "right" ? "south" : "north";
     case "west":
       return turn == "right" ? "north" : "south";
   }
