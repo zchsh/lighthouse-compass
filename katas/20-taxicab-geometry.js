@@ -197,7 +197,6 @@ function blocksAway(directions) {
    */
   let currentPosition = [0, 0];
   let currentDirection = [0, 1];
-  rotateVectorPosition(currentDirection, 90);
   // Iterate
   for (let i = 0; i < directions.length; i++) {
     const step = directions[i];
@@ -208,11 +207,7 @@ function blocksAway(directions) {
     } else if (step == "left") {
       // Turning left is the same as turning 90 degrees counter-clockwise
       currentDirection = rotateVectorPosition(currentDirection, -90);
-    } else if (
-      typeof step == "number" &&
-      step >= 0 &&
-      Math.round(step) == step
-    ) {
+    } else if (typeof step == "number" && Math.abs(Math.round(step)) == step) {
       // Handle positive numbers, which we interpret as movement
       // in the direction we're currently facing
       const [curX, curY] = currentPosition;
