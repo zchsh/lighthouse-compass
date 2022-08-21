@@ -240,6 +240,9 @@ function blocksAway(directions) {
 
 console.log(blocksAway(["right", 2, "left", 3, "left", 1]));
 // Note: the source page for this problem says the answer should be
+// { east: 3, north: 3 }. However, we start of turning to the left,
+// which represents turning west! So this case seems to
+// in fact yield the final position { west: 3, north: 3}.
 console.log(
   blocksAway([
     "left",
