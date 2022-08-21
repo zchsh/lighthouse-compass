@@ -41,6 +41,10 @@ function changeDirection(currentDirection, turn) {
       return turn == "right" ? "south" : "north";
     case "west":
       return turn == "right" ? "north" : "south";
+    default:
+      throw new Error(
+        `Unrecognized direction "${direction}" passed to changeDirection. Valid options are "north", "east", "south", "west". Please provide a valid option.`
+      );
   }
 }
 
@@ -64,19 +68,10 @@ function changeDirection(currentDirection, turn) {
  * as { east: 1, north: 3 }.
  */
 function blocksAway(directions) {
-  /**
-   * We can represent the directions as vectors
-   * to be added to the current position during movement.
-   * - "north" is [0, 1], as traveling north adds 1 unit to the y position
-   * - "east" is [1, 0], as traveling east adds 1 unit to the x position
-   * - "south" is [0, -1], as traveling south subtracts 1 unit from the y position
-   * - "west" is [-1, 0], as traveling west subtracts 1 unit from the x position
-   *
-   * We use currentDirection to keep track of the current vector.
-   */
+  // Keep track of the current position and direction
   let currentPosition = [0, 0];
   let currentDirection = "north";
-  // Iterate
+  // Iterate over the steps we've been given
   for (let i = 0; i < directions.length; i++) {
     const step = directions[i];
     // Handle each of the possible step types
